@@ -57,7 +57,7 @@ function App() {
       onTouchStart={startReviving}
       onTouchEnd={stopReviving}
     >
-      <div className='-mt-[45%] md:-mt-[20%] relative' style={{ userSelect: 'none' }}>
+      <div className='-mt-[45%] md:-mt-[20%] relative user select-none' style={{ userSelect: 'none' }}>
         {!isReviving && !isRevived && <img src="rev.png" alt="Rev" />}
         {isReviving && (
           <div className="reviving-container">
