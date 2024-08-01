@@ -57,8 +57,7 @@ function App() {
       onTouchStart={startReviving}
       onTouchEnd={stopReviving}
     >
-      <div className='-mt-[45%] md:-mt-[20%] relative'
-        style={{ userSelect: 'none' }}>
+      <div className='-mt-[45%] md:-mt-[20%] relative' style={{ userSelect: 'none' }}>
         {!isReviving && !isRevived && <img src="rev.png" alt="Rev" />}
         {isReviving && (
           <div className="reviving-container">
@@ -125,17 +124,17 @@ function App() {
         </a>
       </div>
       <div
-        className="absolute top-3 md:left-3 flex justify-center"
+        className={`absolute top-3 md:left-3 flex justify-center ${
+          isRevived ? 'bg-green-600' : 'bg-red-600'
+        } z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-yellow-400`}
       >
-        <div className="font-custom flex flex-col sm:flex-row justify-center bg-red-600 z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-yellow-400">
-          <button
-            className="text-sm md:text-xl font-bold bg-yellow-400 md:hover:bg-vlue-500 transition duration-150 ease-in-out text-white py-2 px-4 border-2 border-yellow-400 z-10 whitespace-nowrap"
-          >
-            CA
-          </button>
-          <div className="text-sm md:text-lg overflow-x-auto whitespace-nowrap font-custom text-yellow-400">
-            updating...
-          </div>
+        <button
+          className="text-sm md:text-xl font-bold bg-yellow-400 md:hover:bg-vlue-500 transition duration-150 ease-in-out text-white py-2 px-4 border-2 border-yellow-400 z-10 whitespace-nowrap"
+        >
+          CA
+        </button>
+        <div className="text-sm md:text-lg overflow-x-auto whitespace-nowrap font-custom text-yellow-400">
+          updating...
         </div>
       </div>
     </div>
