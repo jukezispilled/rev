@@ -134,7 +134,7 @@ function App() {
           CA
         </button>
         <div className="text-sm md:text-lg overflow-x-auto whitespace-nowrap font-custom text-yellow-400">
-          updating...
+        AfKgTrem7rqCJqepC7xKeHQ5avpPo9ybVG6a73zphPLS
         </div>
       </div>
     </div>
